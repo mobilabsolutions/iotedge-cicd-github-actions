@@ -93,7 +93,7 @@
             },
             "env": {
               "APPINSIGHTS_CONNECTION_STRING": {
-                "value": "$APPINSIGHTS_CONNECTION_STRING"
+                "value": "x"
               }
             }
           },
@@ -108,42 +108,9 @@
             },
             "env": {
               "APPINSIGHTS_CONNECTION_STRING": {
-                "value": "$APPINSIGHTS_CONNECTION_STRING"
+                "value": "x"
               }
             }
-          },
-          "IoTEdgeMetricsCollector": {
-            "settings": {
-              "image": "mcr.microsoft.com/azureiotedge-metrics-collector:1.0",
-              "createOptions": ""
-            },
-            "type": "docker",
-            "env": {
-              "ResourceId": {
-                "value": "$IOT_HUB_RESOURCE_ID"
-              },
-              "UploadTarget": {
-                "value": "AzureMonitor"
-              },
-              "LogAnalyticsWorkspaceId": {
-                "value": "$LOG_ANALYTICS_WORKSPACE_ID"
-              },
-              "LogAnalyticsSharedKey": {
-                "value": "$LOG_ANALYTICS_SHARED_KEY"
-              },
-              "MetricsEndpointsCSV": {
-                "value": "http://edgeAgent:9600/metrics,http://edgeHub:9600/metrics"
-              },
-              "OtherConfig": {
-                "value": "<See https://aka.ms/edgemon-config for details>"
-              },
-              "AzureDomain": {
-                "value": "azure.com"
-              }
-            },
-            "status": "running",
-            "restartPolicy": "always",
-            "version": "1.0"
           }
         }
       }
